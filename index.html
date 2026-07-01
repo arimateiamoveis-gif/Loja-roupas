@@ -44,7 +44,6 @@
         .btn-comprar:hover { background: #1ebe5c; transform: scale(1.02); }
         footer { text-align: center; padding: 20px; color: #b3a39a; font-size: 13px; border-top: 1px solid #eee; letter-spacing: 1px; }
 
-        /* ===== ESTILOS DO CARRINHO ===== */
         .carrinho-btn {
             position: fixed;
             bottom: 30px;
@@ -116,7 +115,7 @@
 
 <!-- BANNER -->
 <section class="banner">
-    <img src="banner.jpg?v=2" alt="Artes Criativa Kids - Moda Infantil">
+    <img src="banner.jpg" alt="Artes Criativa Kids - Moda Infantil">
 </section>
 
 <!-- TÍTULO -->
@@ -127,7 +126,6 @@
 
 <!-- PRODUTOS -->
 <section class="galeria" id="produtos">
-    <!-- Card 1 - Vestido Flora -->
     <div class="card" data-nome="Vestido Flora" data-preco="129.90">
         <img src="vestido1.jpg" alt="Vestido floral">
         <div class="info">
@@ -143,7 +141,6 @@
         </div>
     </div>
 
-    <!-- Card 2 - Conjunto Marinho -->
     <div class="card" data-nome="Conjunto Marinho" data-preco="149.90">
         <img src="conjunto1.jpg" alt="Conjunto marinho">
         <div class="info">
@@ -159,7 +156,6 @@
         </div>
     </div>
 
-    <!-- Card 3 - Macacão Canvas -->
     <div class="card" data-nome="Macacão Canvas" data-preco="139.90">
         <img src="macacao1.jpg" alt="Macacão casual">
         <div class="info">
@@ -175,7 +171,6 @@
         </div>
     </div>
 
-    <!-- Card 4 - Body Listrado -->
     <div class="card" data-nome="Body Listrado" data-preco="89.90">
         <img src="body1.jpg" alt="Body listrado">
         <div class="info">
@@ -191,7 +186,6 @@
         </div>
     </div>
 
-    <!-- Card 5 - Coleção Verão -->
     <div class="card">
         <div class="sem-imagem">✦ novidade em breve ✦</div>
         <div class="info">
@@ -234,7 +228,7 @@
     ✦ Artes Criativa Kids – Feito com carinho para os pequenos ✦
 </footer>
 
-<!-- ===== CARRINHO ===== -->
+<!-- CARRINHO -->
 <button class="carrinho-btn" onclick="toggleCarrinho()">
     🛒 <span id="contador-carrinho">0</span>
 </button>
@@ -249,10 +243,8 @@
 </div>
 
 <script>
-// Carrinho armazenado no navegador
 let carrinho = [];
 
-// Função para adicionar produto ao carrinho
 function adicionarAoCarrinho(nome, preco) {
     const itemExistente = carrinho.find(item => item.nome === nome);
     if (itemExistente) {
@@ -264,7 +256,6 @@ function adicionarAoCarrinho(nome, preco) {
     alert(`${nome} adicionado ao carrinho! 🛒`);
 }
 
-// Atualizar a interface do carrinho
 function atualizarCarrinho() {
     const lista = document.getElementById('lista-carrinho');
     const total = document.getElementById('total-carrinho');
@@ -300,19 +291,16 @@ function atualizarCarrinho() {
     contador.textContent = quantidadeTotal;
 }
 
-// Remover um item específico
 function removerItem(index) {
     carrinho.splice(index, 1);
     atualizarCarrinho();
 }
 
-// Abrir/fechar o popup do carrinho
 function toggleCarrinho() {
     const popup = document.getElementById('carrinho-popup');
     popup.classList.toggle('aberto');
 }
 
-// Finalizar compra e enviar via WhatsApp
 function finalizarCompra() {
     if (carrinho.length === 0) {
         alert('Seu carrinho está vazio! Adicione alguns produtos.');
@@ -333,15 +321,6 @@ function finalizarCompra() {
 
     const url = `https://wa.me/5561998166024?text=${mensagem}`;
     window.open(url, '_blank');
-}
-
-// Fechar popup se clicar fora dele
-window.onclick = function(event) {
-    const popup = document.getElementById('carrinho-popup');
-    const btn = document.querySelector('.carrinho-btn');
-    if (!popup.contains(event.target) && !btn.contains(event.target)) {
-        popup.classList.remove('aberto');
-    }
 }
 </script>
 
