@@ -5,254 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artes Criativa Kids - Roupas Infantis</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Georgia', serif;
-        }
-        body {
-            background-color: #faf7f2;
-            color: #2c2c2c;
-        }
-        /* Banner de apresentação */
-        .banner {
-            text-align: center;
-            padding: 30px 20px 10px;
-            background: #faf7f2;
-        }
-        .banner img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-        /* Galeria de produtos */
-        header {
-            text-align: center;
-            padding: 20px 20px 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        header h1 {
-            font-size: 28px;
-            letter-spacing: 4px;
-            font-weight: 300;
-            color: #4a3f3a;
-        }
-        header p {
-            font-size: 14px;
-            color: #a0847a;
-            margin-top: 6px;
-            letter-spacing: 2px;
-        }
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            padding: 40px 30px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.03);
-            overflow: hidden;
-            transition: 0.25s ease;
-            border: 1px solid #f0ebe6;
-        }
-        .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 14px 30px rgba(0,0,0,0.06);
-        }
-        .card img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            background: #f3efe9;
-            display: block;
-        }
-        .card .info {
-            padding: 18px 18px 22px;
-        }
-        .card .info h3 {
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            color: #3d3430;
-        }
-        .card .info .preco {
-            font-size: 18px;
-            font-weight: 600;
-            color: #b28b7a;
-            margin-top: 6px;
-        }
-        .card .info .detalhe {
-            font-size: 12px;
-            color: #ab9a91;
-            margin-top: 4px;
-            letter-spacing: 0.3px;
-        }
-        .sem-imagem {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 260px;
-            background: #f3efe9;
-            color: #bfb0a7;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-        /* Rodapé com contatos - só os símbolos clicáveis */
-        .contato {
-            background: #faf7f2;
-            padding: 40px 30px 30px;
-            border-top: 1px solid #eee;
-            text-align: center;
-        }
-        .contato-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .contato-itens {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .item {
-            background: white;
-            padding: 20px 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            border: 1px solid #f0ebe6;
-            transition: 0.3s;
-        }
-        .item:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-        }
-        .item .simbolo {
-            font-size: 36px;
-            display: inline-block;
-            margin-bottom: 6px;
-            transition: 0.2s;
-            text-decoration: none;
-        }
-        .item .simbolo:hover {
-            transform: scale(1.15);
-        }
-        .item p {
-            margin: 4px 0;
-            color: #2c2c2c;
-        }
-        .item .descricao {
-            font-size: 13px;
-            color: #ab9a91;
-        }
-        .item strong {
-            color: #4a3f3a;
-        }
-        .frase-final {
-            font-size: 16px;
-            color: #7a6a60;
-            margin-top: 20px;
-            letter-spacing: 1px;
-            font-style: italic;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #b3a39a;
-            font-size: 13px;
-            border-top: 1px solid #eee;
-            letter-spacing: 1px;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Georgia', serif; }
+        body { background-color: #faf7f2; color: #2c2c2c; }
+        .banner { text-align: center; padding: 30px 20px 10px; background: #faf7f2; }
+        .banner img { max-width: 100%; height: auto; border-radius: 16px; }
+        header { text-align: center; padding: 20px 20px 10px; border-bottom: 1px solid #ddd; }
+        header h1 { font-size: 28px; letter-spacing: 4px; font-weight: 300; color: #4a3f3a; }
+        header p { font-size: 14px; color: #a0847a; margin-top: 6px; letter-spacing: 2px; }
+        .galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; padding: 40px 30px; max-width: 1100px; margin: 0 auto; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.03); overflow: hidden; transition: 0.25s ease; border: 1px solid #f0ebe6; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,0.06); }
+        .card img { width: 100%; height: 260px; object-fit: cover; background: #f3efe9; display: block; }
+        .card .info { padding: 18px 18px 22px; }
+        .card .info h3 { font-size: 16px; font-weight: 400; letter-spacing: 0.5px; color: #3d3430; }
+        .card .info .preco { font-size: 18px; font-weight: 600; color: #b28b7a; margin-top: 6px; }
+        .card .info .detalhe { font-size: 12px; color: #ab9a91; margin-top: 4px; letter-spacing: 0.3px; }
+        .sem-imagem { display: flex; align-items: center; justify-content: center; height: 260px; background: #f3efe9; color: #bfb0a7; font-size: 14px; letter-spacing: 1px; }
+        .contato { background: #faf7f2; padding: 40px 30px 30px; border-top: 1px solid #eee; text-align: center; }
+        .contato-container { max-width: 1100px; margin: 0 auto; }
+        .contato-itens { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 20px 0; }
+        .item { background: white; padding: 20px 15px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #f0ebe6; transition: 0.3s; }
+        .item:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+        .item .simbolo { font-size: 36px; display: inline-block; margin-bottom: 6px; text-decoration: none; transition: 0.2s; }
+        .item .simbolo:hover { transform: scale(1.15); }
+        .item p { margin: 4px 0; color: #2c2c2c; }
+        .item .descricao { font-size: 13px; color: #ab9a91; }
+        .item strong { color: #4a3f3a; }
+        .frase-final { font-size: 16px; color: #7a6a60; margin-top: 20px; letter-spacing: 1px; font-style: italic; }
+        footer { text-align: center; padding: 20px; color: #b3a39a; font-size: 13px; border-top: 1px solid #eee; letter-spacing: 1px; }
     </style>
 </head>
 <body>
 
-<!-- BANNER DE APRESENTAÇÃO (imagem do cartaz) -->
+<!-- BANNER -->
 <section class="banner">
-    <img src="banner-contato.jpg" alt="Artes Criativa Kids - Moda Infantil">
+    <img src="banner.jpg" alt="Artes Criativa Kids - Moda Infantil">
 </section>
 
-<!-- TÍTULO DA LOJA -->
+<!-- TÍTULO -->
 <header>
     <h1>✦ ARTES CRIATIVA KIDS ✦</h1>
     <p>Moda infantil com amor, charme e estilo!</p>
 </header>
 
-<!-- GALERIA DE PRODUTOS -->
+<!-- PRODUTOS -->
 <section class="galeria">
-    <!-- Card 1 -->
     <div class="card">
         <img src="vestido1.jpg" alt="Vestido floral">
-        <div class="info">
-            <h3>Vestido Flora</h3>
-            <div class="preco">R$ 129,90</div>
-            <div class="detalhe">Algodão orgânico · 2 a 6 anos</div>
-        </div>
+        <div class="info"><h3>Vestido Flora</h3><div class="preco">R$ 129,90</div><div class="detalhe">Algodão orgânico · 2 a 6 anos</div></div>
     </div>
-    <!-- Card 2 -->
     <div class="card">
         <img src="conjunto1.jpg" alt="Conjunto marinho">
-        <div class="info">
-            <h3>Conjunto Marinho</h3>
-            <div class="preco">R$ 149,90</div>
-            <div class="detalhe">Linho · 3 a 8 anos</div>
-        </div>
+        <div class="info"><h3>Conjunto Marinho</h3><div class="preco">R$ 149,90</div><div class="detalhe">Linho · 3 a 8 anos</div></div>
     </div>
-    <!-- Card 3 -->
     <div class="card">
         <img src="macacao1.jpg" alt="Macacão casual">
-        <div class="info">
-            <h3>Macacão Canvas</h3>
-            <div class="preco">R$ 139,90</div>
-            <div class="detalhe">Algodão cru · 1 a 4 anos</div>
-        </div>
+        <div class="info"><h3>Macacão Canvas</h3><div class="preco">R$ 139,90</div><div class="detalhe">Algodão cru · 1 a 4 anos</div></div>
     </div>
-    <!-- Card 4 -->
     <div class="card">
         <img src="body1.jpg" alt="Body listrado">
-        <div class="info">
-            <h3>Body Listrado</h3>
-            <div class="preco">R$ 89,90</div>
-            <div class="detalhe">Malha macia · 0 a 2 anos</div>
-        </div>
+        <div class="info"><h3>Body Listrado</h3><div class="preco">R$ 89,90</div><div class="detalhe">Malha macia · 0 a 2 anos</div></div>
     </div>
-    <!-- Card 5 -->
     <div class="card">
         <div class="sem-imagem">✦ novidade em breve ✦</div>
-        <div class="info">
-            <h3>Coleção Verão</h3>
-            <div class="preco">Em breve</div>
-            <div class="detalhe">Pré-lançamento</div>
-        </div>
+        <div class="info"><h3>Coleção Verão</h3><div class="preco">Em breve</div><div class="detalhe">Pré-lançamento</div></div>
     </div>
 </section>
 
-<!-- SEÇÃO DE CONTATO (RODAPÉ) – links APENAS nos símbolos -->
+<!-- CONTATOS -->
 <section class="contato">
     <div class="contato-container">
         <div class="contato-itens">
-            <!-- WhatsApp -->
             <div class="item">
                 <a href="https://wa.me/5561998166024?text=Olá!%20Vi%20o%20site%20da%20Artes%20Criativa%20Kids%20e%20gostaria%20de%20mais%20informações!" target="_blank" class="simbolo">📞</a>
                 <p><strong>FALE CONOSCO</strong><br>61 99816-6024</p>
                 <p class="descricao">Atendimento via WhatsApp</p>
             </div>
-            <!-- Instagram -->
+
             <div class="item">
                 <a href="https://instagram.com/atelié_luh_artes_criativa" target="_blank" class="simbolo">📸</a>
                 <p><strong>SIGA NOSSO INSTAGRAM</strong><br>@atelié_luh_artes_criativa</p>
             </div>
-            <!-- Localização -->
             <div class="item">
                 <a href="https://www.google.com/maps?q=Brasília+DF" target="_blank" class="simbolo">📍</a>
                 <p><strong>BRASÍLIA - DF</strong><br>Atendemos toda a região</p>
             </div>
-            <!-- Envio -->
             <div class="item">
                 <span class="simbolo" style="cursor:default;">📦</span>
                 <p><strong>ENVIAMOS PARA TODO O BRASIL!</strong><br>Com muito carinho até você!</p>
@@ -268,3 +105,5 @@
 
 </body>
 </html>
+
+
