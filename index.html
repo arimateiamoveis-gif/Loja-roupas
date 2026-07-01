@@ -32,83 +32,23 @@
         .item .descricao { font-size: 13px; color: #ab9a91; }
         .item strong { color: #4a3f3a; }
         .frase-final { font-size: 16px; color: #7a6a60; margin-top: 20px; letter-spacing: 1px; font-style: italic; }
+        /* NOVOS ESTILOS DOS PRODUTOS */
+        .badge { display: inline-block; background: #e74c3c; color: #fff; font-size: 10px; font-weight: bold; padding: 2px 10px; border-radius: 20px; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.5px; }
+        .badge-novidade { background: #3498db; }
+        .avaliacao { display: flex; align-items: center; gap: 5px; margin: 6px 0; font-size: 14px; }
+        .estrelas { color: #f1c40f; letter-spacing: 2px; }
+        .qtde { display: flex; justify-content: space-between; font-size: 13px; color: #555; border-top: 1px dashed #eee; padding-top: 8px; margin-top: 8px; }
+        .qtde span { background: #f8f4f0; padding: 2px 10px; border-radius: 12px; }
+        .tamanhos { margin: 8px 0; display: flex; gap: 6px; flex-wrap: wrap; }
+        .tamanhos span { background: #f0ebe6; padding: 2px 12px; border-radius: 12px; font-size: 12px; color: #4a3f3a; }
+        .btn-comprar { display: block; background: #25D366; color: white; text-align: center; padding: 10px; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 14px; margin-top: 12px; transition: 0.3s; border: none; }
+        .btn-comprar:hover { background: #1ebe5c; transform: scale(1.02); }
         footer { text-align: center; padding: 20px; color: #b3a39a; font-size: 13px; border-top: 1px solid #eee; letter-spacing: 1px; }
-/* === NOVOS ESTILOS PARA OS PRODUTOS === */
-.badge {
-    display: inline-block;
-    background: #e74c3c;
-    color: #fff;
-    font-size: 10px;
-    font-weight: bold;
-    padding: 2px 10px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-.badge-novidade {
-    background: #3498db;
-}
-.avaliacao {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin: 6px 0;
-    font-size: 14px;
-}
-.estrelas {
-    color: #f1c40f;
-    letter-spacing: 2px;
-}
-.qtde {
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    color: #555;
-    border-top: 1px dashed #eee;
-    padding-top: 8px;
-    margin-top: 8px;
-}
-.qtde span {
-    background: #f8f4f0;
-    padding: 2px 10px;
-    border-radius: 12px;
-}
-.tamanhos {
-    margin: 8px 0;
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-.tamanhos span {
-    background: #f0ebe6;
-    padding: 2px 12px;
-    border-radius: 12px;
-    font-size: 12px;
-    color: #4a3f3a;
-}
-.btn-comprar {
-    display: block;
-    background: #25D366;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    margin-top: 12px;
-    transition: 0.3s;
-    border: none;
-}
-.btn-comprar:hover {
-    background: #1ebe5c;
-    transform: scale(1.02);
-}    </style>
+    </style>
 </head>
 <body>
 
-<!-- BANNER -->
+<!-- BANNER (NOVA IMAGEM) -->
 <section class="banner">
     <img src="banner.jpg" alt="Artes Criativa Kids - Moda Infantil">
 </section>
@@ -122,98 +62,74 @@
 <!-- PRODUTOS -->
 <section class="galeria">
     <!-- Card 1 - Vestido Flora -->
-<div class="card">
-    <img src="vestido1.jpg" alt="Vestido floral">
-    <div class="info">
-        <span class="badge">🔥 Mais Vendido</span>
-        <h3>Vestido Flora</h3>
-        <div class="avaliacao">
-            <span class="estrelas">★★★★★</span> 4.9 (32)
+    <div class="card">
+        <img src="vestido1.jpg" alt="Vestido floral">
+        <div class="info">
+            <span class="badge">🔥 Mais Vendido</span>
+            <h3>Vestido Flora</h3>
+            <div class="avaliacao"><span class="estrelas">★★★★★</span> 4.9 (32)</div>
+            <div class="preco">R$ 129,90</div>
+            <div class="detalhe">Algodão orgânico · 2 a 6 anos</div>
+            <div class="tamanhos"><span>P</span><span>M</span><span>G</span></div>
+            <div class="qtde"><span>✅ Estoque: 12 un.</span><span>📦 43 vendidos</span></div>
+            <a href="https://wa.me/5561998166024?text=Olá!%20Quero%20comprar%20o%20Vestido%20Flora%20(R$129,90)%20que%20vi%20no%20site." target="_blank" class="btn-comprar">💬 Quero este!</a>
         </div>
-        <div class="preco">R$ 129,90</div>
-        <div class="detalhe">Algodão orgânico · 2 a 6 anos</div>
-        <div class="tamanhos"><span>P</span><span>M</span><span>G</span></div>
-        <div class="qtde">
-            <span>✅ Estoque: 12 un.</span>
-            <span>📦 43 vendidos</span>
-        </div>
-        <a href="https://wa.me/5561998166024?text=Olá!%20Quero%20comprar%20o%20Vestido%20Flora%20(R$129,90)%20que%20vi%20no%20site." target="_blank" class="btn-comprar">💬 Quero este!</a>
     </div>
-</div>
+    <!-- Card 2 - Conjunto Marinho -->
+    <div class="card">
+        <img src="conjunto1.jpg" alt="Conjunto marinho">
+        <div class="info">
+            <span class="badge badge-novidade">✨ Novidade</span>
+            <h3>Conjunto Marinho</h3>
+            <div class="avaliacao"><span class="estrelas">★★★★☆</span> 4.7 (18)</div>
+            <div class="preco">R$ 149,90</div>
+            <div class="detalhe">Linho · 3 a 8 anos</div>
+            <div class="tamanhos"><span>P</span><span>M</span><span>G</span><span>GG</span></div>
+            <div class="qtde"><span>✅ Estoque: 8 un.</span><span>📦 27 vendidos</span></div>
+            <a href="https://wa.me/5561998166024?text=Olá!%20Quero%20comprar%20o%20Conjunto%20Marinho%20(R$149,90)%20que%20vi%20no%20site." target="_blank" class="btn-comprar">💬 Quero este!</a>
+        </div>
+    </div>
+    <!-- Card 3 - Macacão Canvas -->
+    <div class="card">
+        <img src="macacao1.jpg" alt="Macacão casual">
+        <div class="info">
+            <span class="badge">👍 Mais Pedido</span>
+            <h3>Macacão Canvas</h3>
+            <div class="avaliacao"><span class="estrelas">★★★★★</span> 5.0 (11)</div>
+            <div class="preco">R$ 139,90</div>
+            <div class="detalhe">Algodão cru · 1 a 4 anos</div>
+            <div class="tamanhos"><span>P</span><span>M</span></div>
+            <div class="qtde"><span>✅ Estoque: 5 un.</span><span>📦 19 vendidos</span></div>
+            <a href="https://wa.me/5561998166024?text=Olá!%20Quero%20comprar%20o%20Macacão%20Canvas%20(R$139,90)%20que%20vi%20no%20site." target="_blank" class="btn-comprar">💬 Quero este!</a>
+        </div>
+    </div>
+    <!-- Card 4 - Body Listrado -->
+    <div class="card">
+        <img src="body1.jpg" alt="Body listrado">
+        <div class="info">
+            <span class="badge badge-novidade">⭐ Ofertinha</span>
+            <h3>Body Listrado</h3>
+            <div class="avaliacao"><span class="estrelas">★★★★☆</span> 4.5 (25)</div>
+            <div class="preco">R$ 89,90</div>
+            <div class="detalhe">Malha macia · 0 a 2 anos</div>
+            <div class="tamanhos"><span>P</span><span>M</span></div>
+            <div class="qtde"><span>✅ Estoque: 20 un.</span><span>📦 61 vendidos</span></div>
+            <a href="https://wa.me/5561998166024?text=Olá!%20Quero%20comprar%20o%20Body%20Listrado%20(R$89,90)%20que%20vi%20no%20site." target="_blank" class="btn-comprar">💬 Quero este!</a>
+        </div>
+    </div>
+    <!-- Card 5 - Coleção Verão -->
+    <div class="card">
+        <div class="sem-imagem">✦ novidade em breve ✦</div>
+        <div class="info">
+            <h3>Coleção Verão</h3>
+            <div class="preco">Em breve</div>
+            <div class="detalhe">Pré-lançamento</div>
+            <div class="qtde" style="border-top: none; margin-top: 5px;"><span>🔔 Avise-me</span></div>
+            <a href="https://wa.me/5561998166024?text=Olá!%20Quero%20saber%20quando%20lançar%20a%20Coleção%20Verão!" target="_blank" class="btn-comprar" style="background: #b28b7a;">🔔 Quero novidades</a>
+        </div>
+    </div>
+</section>
 
-<!-- Card 2 - Conjunto Marinho -->
-<div class="card">
-    <img src="conjunto1.jpg" alt="Conjunto marinho">
-    <div class="info">
-        <span class="badge badge-novidade">✨ Novidade</span>
-        <h3>Conjunto Marinho</h3>
-        <div class="avaliacao">
-            <span class="estrelas">★★★★☆</span> 4.7 (18)
-        </div>
-        <div class="preco">R$ 149,90</div>
-        <div class="detalhe">Linho · 3 a 8 anos</div>
-        <div class="tamanhos"><span>P</span><span>M</span><span>G</span><span>GG</span></div>
-        <div class="qtde">
-            <span>✅ Estoque: 8 un.</span>
-            <span>📦 27 vendidos</span>
-        </div>
-        <a href="https://wa.me/5561998166024?text=Olá!%20Quero%20comprar%20o%20Conjunto%20Marinho%20(R$149,90)%20que%20vi%20no%20site." target="_blank" class="btn-comprar">💬 Quero este!</a>
-    </div>
-</div>
-
-<!-- Card 3 - Macacão Canvas -->
-<div class="card">
-    <img src="macacao1.jpg" alt="Macacão casual">
-    <div class="info">
-        <span class="badge">👍 Mais Pedido</span>
-        <h3>Macacão Canvas</h3>
-        <div class="avaliacao">
-            <span class="estrelas">★★★★★</span> 5.0 (11)
-        </div>
-        <div class="preco">R$ 139,90</div>
-        <div class="detalhe">Algodão cru · 1 a 4 anos</div>
-        <div class="tamanhos"><span>P</span><span>M</span></div>
-        <div class="qtde">
-            <span>✅ Estoque: 5 un.</span>
-            <span>📦 19 vendidos</span>
-        </div>
-        <a href="https://wa.me/5561998166024?text=Olá!%20Quero%20comprar%20o%20Macacão%20Canvas%20(R$139,90)%20que%20vi%20no%20site." target="_blank" class="btn-comprar">💬 Quero este!</a>
-    </div>
-</div>
-
-<!-- Card 4 - Body Listrado -->
-<div class="card">
-    <img src="body1.jpg" alt="Body listrado">
-    <div class="info">
-        <span class="badge badge-novidade">⭐ Ofertinha</span>
-        <h3>Body Listrado</h3>
-        <div class="avaliacao">
-            <span class="estrelas">★★★★☆</span> 4.5 (25)
-        </div>
-        <div class="preco">R$ 89,90</div>
-        <div class="detalhe">Malha macia · 0 a 2 anos</div>
-        <div class="tamanhos"><span>P</span><span>M</span></div>
-        <div class="qtde">
-            <span>✅ Estoque: 20 un.</span>
-            <span>📦 61 vendidos</span>
-        </div>
-        <a href="https://wa.me/5561998166024?text=Olá!%20Quero%20comprar%20o%20Body%20Listrado%20(R$89,90)%20que%20vi%20no%20site." target="_blank" class="btn-comprar">💬 Quero este!</a>
-    </div>
-</div>
-
-<!-- Card 5 - Coleção Verão -->
-<div class="card">
-    <div class="sem-imagem">✦ novidade em breve ✦</div>
-    <div class="info">
-        <h3>Coleção Verão</h3>
-        <div class="preco">Em breve</div>
-        <div class="detalhe">Pré-lançamento</div>
-        <div class="qtde" style="border-top: none; margin-top: 5px;">
-            <span>🔔 Avise-me</span>
-        </div>
-        <a href="https://wa.me/5561998166024?text=Olá!%20Quero%20saber%20quando%20lançar%20a%20Coleção%20Verão!" target="_blank" class="btn-comprar" style="background: #b28b7a;">🔔 Quero novidades</a>
-    </div>
-</div>  
 <!-- CONTATOS -->
 <section class="contato">
     <div class="contato-container">
@@ -223,10 +139,9 @@
                 <p><strong>FALE CONOSCO</strong><br>61 99816-6024</p>
                 <p class="descricao">Atendimento via WhatsApp</p>
             </div>
-
             <div class="item">
-                <a href="https://instagram.com/atelié_luh_artes_criativa" target="_blank" class="simbolo">📸</a>
-                <p><strong>SIGA NOSSO INSTAGRAM</strong><br>@atelié_luh_artes_criativa</p>
+                <a href="https://instagram.com/atelie_luh_artes_criativa" target="_blank" class="simbolo">📸</a>
+                <p><strong>SIGA NOSSO INSTAGRAM</strong><br>@atelie_luh_artes_criativa</p>
             </div>
             <div class="item">
                 <a href="https://www.google.com/maps?q=Brasília+DF" target="_blank" class="simbolo">📍</a>
@@ -247,6 +162,3 @@
 
 </body>
 </html>
-
-
-
