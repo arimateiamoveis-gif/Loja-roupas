@@ -200,7 +200,149 @@
 
 <!-- CONTATOS -->
 <!-- SEÇÃO DE FORMAS DE PAGAMENTO -->
+<!-- SEÇÃO DE FRETE -->
+<section class="frete">
+    <div class="frete-container">
+        <h2>📦 Opções de Envio</h2>
+        <p class="subtitulo-frete">Escolha a melhor forma para receber seu pedido</p>
+        
+        <div class="frete-grid">
+            <div class="frete-card">
+                <span class="icone-frete">📮</span>
+                <strong>PAC</strong>
+                <p>Econômico e confiável</p>
+                <small>Prazo: 3 a 12 dias úteis</small>
+                <small>Rastreamento via Correios</small>
+                <span class="selo-frete">💰 + Econômico</span>
+            </div>
+            <div class="frete-card destaque">
+                <span class="icone-frete">🚀</span>
+                <strong>SEDEX</strong>
+                <p>Entrega rápida e prioritária</p>
+                <small>Prazo: 1 a 3 dias úteis</small>
+                <small>Rastreamento via Correios</small>
+                <span class="selo-frete destaque">⚡ + Rápido</span>
+            </div>
+        </div>
+        <div class="info-frete">
+            <p>💰 O valor exato do frete é calculado com base no <strong>CEP de destino</strong> e no <strong>peso do pedido</strong>.</p>
+            <p>📱 <strong>Envie uma mensagem no WhatsApp</strong> com seu CEP e os itens desejados, e nossa equipe te informa o valor certinho!</p>
+            <a href="https://wa.me/5561998166024?text=Olá!%20Gostaria%20de%20saber%20o%20frete%20para%20o%20meu%20CEP%3A%20" target="_blank" class="btn-frete-whats">💬 Calcular frete agora</a>
+        </div>
+    </div>
+</section>
 <section class="pagamentos">
+/* ESTILOS DA SEÇÃO DE FRETE */
+.frete {
+    background: #ffffff;
+    padding: 50px 20px 30px;
+    border-top: 1px solid #f0ebe6;
+    text-align: center;
+}
+.frete-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.frete h2 {
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: #4a3f3a;
+}
+.subtitulo-frete {
+    color: #a0847a;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.frete-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.frete-card {
+    background: #faf7f2;
+    padding: 25px 15px;
+    border-radius: 16px;
+    border: 1px solid #f0ebe6;
+    transition: 0.3s;
+    position: relative;
+}
+.frete-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+.frete-card.destaque {
+    background: #fcf6f0;
+    border-color: #b28b7a;
+}
+.icone-frete {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 8px;
+}
+.frete-card strong {
+    display: block;
+    color: #4a3f3a;
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+.frete-card p {
+    color: #7a6a60;
+    font-size: 14px;
+    margin: 4px 0;
+}
+.frete-card small {
+    color: #ab9a91;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+}
+.selo-frete {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 2px 14px;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+.selo-frete.destaque {
+    background: #3498db;
+}
+.info-frete {
+    background: #f8f4f0;
+    padding: 20px;
+    border-radius: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid #f0ebe6;
+}
+.info-frete p {
+    color: #4a3f3a;
+    font-size: 14px;
+    margin: 6px 0;
+}
+.info-frete strong {
+    color: #2c2c2c;
+}
+.btn-frete-whats {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+.btn-frete-whats:hover {
+    background: #1ebe5c;
+    transform: scale(1.02);
+}
     <div class="pagamentos-container">
         <h2>💳 Formas de Pagamento</h2>
         <p class="subtitulo-pag">Facilidade e segurança na hora de comprar</p>
