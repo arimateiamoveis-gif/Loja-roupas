@@ -317,28 +317,51 @@
 </div>
 
 <script>
+<script>
+// ===== TESTE DO CARRINHO =====
+console.log("🚀 Carrinho carregado com sucesso!");
+
 let carrinho = [];
 
 function adicionarAoCarrinho(nome, preco) {
+    console.log(`🛒 Tentando adicionar: ${nome} - R$ ${preco}`);
+    
+    // Verifica se o produto já está no carrinho
     const itemExistente = carrinho.find(item => item.nome === nome);
     if (itemExistente) {
         itemExistente.quantidade += 1;
+        console.log(`✅ ${nome} quantidade atualizada para ${itemExistente.quantidade}`);
     } else {
         carrinho.push({ nome, preco, quantidade: 1 });
+        console.log(`✅ ${nome} adicionado ao carrinho pela primeira vez`);
     }
+    
     atualizarCarrinho();
     alert(`${nome} adicionado ao carrinho! 🛒`);
+    console.log(`📦 Carrinho atual:`, carrinho);
 }
 
 function atualizarCarrinho() {
+    console.log("🔄 Atualizando interface do carrinho...");
+    
     const lista = document.getElementById('lista-carrinho');
     const total = document.getElementById('total-carrinho');
     const contador = document.getElementById('contador-carrinho');
+    
+    // Verifica se os elementos existem
+    if (!lista || !total || !contador) {
+        console.error("❌ ERRO: Elementos do carrinho não encontrados!");
+        console.log("lista:", lista);
+        console.log("total:", total);
+        console.log("contador:", contador);
+        return;
+    }
 
     if (carrinho.length === 0) {
         lista.innerHTML = `<div class="carrinho-vazio">Seu carrinho está vazio.</div>`;
         total.textContent = 'Total: R$ 0,00';
         contador.textContent = '0';
+        console.log("📭 Carrinho vazio");
         return;
     }
 
@@ -363,21 +386,32 @@ function atualizarCarrinho() {
     lista.innerHTML = html;
     total.textContent = `Total: R$ ${soma.toFixed(2).replace('.', ',')}`;
     contador.textContent = quantidadeTotal;
+    console.log(`✅ Carrinho atualizado: ${quantidadeTotal} itens, Total: R$ ${soma.toFixed(2)}`);
 }
 
 function removerItem(index) {
+    console.log(`🗑️ Removendo item na posição ${index}: ${carrinho[index].nome}`);
     carrinho.splice(index, 1);
     atualizarCarrinho();
 }
 
 function toggleCarrinho() {
+    console.log("🔄 Alternando visibilidade do carrinho");
     const popup = document.getElementById('carrinho-popup');
+    if (!popup) {
+        console.error("❌ ERRO: Popup do carrinho não encontrado!");
+        return;
+    }
     popup.classList.toggle('aberto');
+    console.log(`📦 Carrinho visível: ${popup.classList.contains('aberto')}`);
 }
 
 function finalizarCompra() {
+    console.log("💳 Tentando finalizar compra...");
+    
     if (carrinho.length === 0) {
         alert('Seu carrinho está vazio! Adicione alguns produtos.');
+        console.warn("⚠️ Carrinho vazio");
         return;
     }
 
@@ -387,21 +421,53 @@ function finalizarCompra() {
     carrinho.forEach(item => {
         const subtotal = item.preco * item.quantidade;
         total += subtotal;
-        mensagem += `- ${item.nome} (x${item.quantidade}) = R$ ${subtotal.to
-Fixed(2).replace('.', ',')}%0A`;
+        mensagem += `- ${item.nome} (x${item.quantidade}) = R$ ${subtotal.toFixed(2).replace('.', ',')}%0A`;
     });
 
     mensagem += `%0A*Total: R$ ${total.toFixed(2).replace('.', ',')}*`;
     mensagem += `%0A%0APor favor, confirme o pedido.`;
 
     const url = `https://wa.me/5561998166024?text=${mensagem}`;
+    console.log("📤 Abrindo WhatsApp com mensagem:", mensagem);
     window.open(url, '_blank');
 }
+
+// ===== TESTE DE VERIFICAÇÃO =====
+console.log("✅ Script do carrinho carregado completamente!");
+console.log("🛒 Funções disponíveis:", {
+    adicionarAoCarrinho: typeof adicionarAoCarrinho,
+    atualizarCarrinho: typeof atualizarCarrinho,
+    removerItem: typeof removerItem,
+    toggleCarrinho: typeof toggleCarrinho,
+    finalizarCompra: typeof finalizarCompra
+});
+
+// Verifica se os elementos HTML existem
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("📄 Página carregada. Verificando elementos do carrinho...");
+    
+    const elementos = {
+        'lista-carrinho': document.getElementById('lista-carrinho'),
+        'total-carrinho': document.getElementById('total-carrinho'),
+        'contador-carrinho': document.getElementById('contador-carrinho'),
+        'carrinho-popup': document.getElementById('carrinho-popup')
+    };
+    
+    for (const [nome, elemento] of Object.entries(elementos)) {
+        if (elemento) {
+            console.log(`✅ Elemento '${nome}' encontrado!`);
+        } else {
+            console.error(`❌ Elemento '${nome}' NÃO encontrado!`);
+        }
+    }
+});
+</script>
 </script>
 
 </body>
 <!-- Forçando atualização do GitHub Pages -->
 </html>
+
 
 
 
