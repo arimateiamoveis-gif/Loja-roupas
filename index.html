@@ -278,7 +278,7 @@
                 <p class="descricao">Atendimento via WhatsApp</p>
             </div>
             <div class="item">
-                <a href="https://instagram.com/atelie_luh_artes_criativa" target="_blank" class="simbolo">📸</a>
+                <a href="https://instagram.com/atelie_luh_artes_criativ_kidsa" target="_blank" class="simbolo">📸</a>
                 <p><strong>SIGA NOSSO INSTAGRAM</strong><br>@atelie_luh_artes_criativa</p>
             </div>
             <div class="item">
@@ -387,7 +387,8 @@ function finalizarCompra() {
     carrinho.forEach(item => {
         const subtotal = item.preco * item.quantidade;
         total += subtotal;
-        mensagem += `- ${item.nome} (x${item.quantidade}) = R$ ${subtotal.toFixed(2).replace('.', ',')}%0A`;
+        mensagem += `- ${item.nome} (x${item.quantidade}) = R$ ${subtotal.to
+Fixed(2).replace('.', ',')}%0A`;
     });
 
     mensagem += `%0A*Total: R$ ${total.toFixed(2).replace('.', ',')}*`;
