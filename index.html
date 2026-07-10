@@ -44,6 +44,41 @@
         .btn-comprar:hover { background: #1ebe5c; transform: scale(1.02); }
         footer { text-align: center; padding: 20px; color: #b3a39a; font-size: 13px; border-top: 1px solid #eee; letter-spacing: 1px; }
 
+        /* FRE */
+        .frete { background: #ffffff; padding: 50px 20px 30px; border-top: 1px solid #f0ebe6; text-align: center; }
+        .frete-container { max-width: 1100px; margin: 0 auto; }
+        .frete h2 { font-size: 28px; font-weight: 300; letter-spacing: 2px; color: #4a3f3a; }
+        .subtitulo-frete { color: #a0847a; margin-bottom: 30px; font-size: 16px; }
+        .frete-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .frete-card { background: #faf7f2; padding: 25px 15px; border-radius: 16px; border: 1px solid #f0ebe6; transition: 0.3s; }
+        .frete-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
+        .frete-card.destaque { background: #fcf6f0; border-color: #b28b7a; }
+        .icone-frete { font-size: 40px; display: block; margin-bottom: 8px; }
+        .frete-card strong { display: block; color: #4a3f3a; font-size: 20px; }
+        .frete-card p { color: #7a6a60; font-size: 14px; margin: 4px 0; }
+        .frete-card small { color: #ab9a91; font-size: 12px; display: block; }
+        .selo-frete { display: inline-block; background: #e74c3c; color: white; font-size: 11px; font-weight: bold; padding: 2px 14px; border-radius: 20px; margin-top: 10px; text-transform: uppercase; }
+        .selo-frete.destaque { background: #3498db; }
+        .info-frete { background: #f8f4f0; padding: 20px; border-radius: 16px; max-width: 700px; margin: 0 auto; border: 1px solid #f0ebe6; }
+        .info-frete p { color: #4a3f3a; font-size: 14px; margin: 6px 0; }
+        .btn-frete-whats { display: inline-block; background: #25D366; color: white; padding: 12px 28px; border-radius: 30px; text-decoration: none; font-weight: bold; margin-top: 12px; transition: 0.3s; }
+        .btn-frete-whats:hover { background: #1ebe5c; transform: scale(1.02); }
+
+        /* PAGAMENTOS */
+        .pagamentos { background: #f8f4f0; padding: 50px 20px 30px; border-top: 1px solid #eee; text-align: center; }
+        .pagamentos-container { max-width: 1100px; margin: 0 auto; }
+        .pagamentos h2 { font-size: 28px; font-weight: 300; letter-spacing: 2px; color: #4a3f3a; }
+        .subtitulo-pag { color: #a0847a; margin-bottom: 30px; font-size: 16px; }
+        .metodos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .metodo-card { background: white; padding: 25px 15px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #f0ebe6; transition: 0.3s; }
+        .metodo-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.06); }
+        .icone-metodo { font-size: 40px; display: block; margin-bottom: 8px; }
+        .metodo-card strong { display: block; color: #4a3f3a; font-size: 18px; }
+        .metodo-card p { color: #7a6a60; font-size: 14px; margin: 4px 0; }
+        .metodo-card small { color: #ab9a91; font-size: 12px; display: block; margin-top: 6px; }
+        .info-pag { background: #fff6f0; padding: 15px 20px; border-radius: 30px; border: 1px solid #f0e3db; max-width: 700px; margin: 0 auto; }
+        .info-pag p { color: #5a4a40; font-size: 14px; }
+
         /* CARRINHO */
         .carrinho-btn { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; border: none; border-radius: 60px; padding: 16px 22px; font-size: 28px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); cursor: pointer; transition: 0.3s; z-index: 999; display: flex; align-items: center; gap: 8px; }
         .carrinho-btn span { font-size: 16px; background: red; color: white; border-radius: 30px; padding: 0 10px; font-weight: bold; }
@@ -79,7 +114,9 @@
 <section class="galeria" id="produtos">
     <!-- Card 1 -->
     <div class="card" data-nome="Vestido Bolero Malu" data-preco="189.99">
-        <img src="vestido-bolero-malu.jpg" alt="Vestido Bolero Malu">
+        <a href="vestido-bolero-malu.jpg" target="_blank">
+            <img src="vestido-bolero-malu.jpg" alt="Vestido Bolero Malu">
+        </a>
         <div class="info">
             <span class="badge">✨ Novidade</span>
             <h3>Vestido Bolero Malu</h3>
@@ -95,7 +132,9 @@
 
     <!-- Card 2 -->
     <div class="card" data-nome="Vestido Bebê com Boneca" data-preco="199.99">
-        <img src="vestido-bebe-boneca.jpg" alt="Vestido Bebê com Boneca">
+        <a href="vestido-bebe-boneca.jpg" target="_blank">
+            <img src="vestido-bebe-boneca.jpg" alt="Vestido Bebê com Boneca">
+        </a>
         <div class="info">
             <span class="badge">✨ Novidade</span>
             <h3>Vestido Bebê com Boneca</h3>
@@ -111,7 +150,9 @@
 
     <!-- Card 3 -->
     <div class="card" data-nome="Vestido Carol" data-preco="99.99">
-        <img src="vestido-carol.jpg" alt="Vestido Carol">
+        <a href="vestido-carol.jpg" target="_blank">
+            <img src="vestido-carol.jpg" alt="Vestido Carol">
+        </a>
         <div class="info">
             <span class="badge">⭐ Ofertinha</span>
             <h3>Vestido Carol</h3>
@@ -127,7 +168,9 @@
 
     <!-- Card 4 -->
     <div class="card" data-nome="Vestido Aplique Cereja" data-preco="99.99">
-        <img src="vestido-aplique-cereja.jpg" alt="Vestido Aplique Cereja">
+        <a href="vestido-aplique-cereja.jpg" target="_blank">
+            <img src="vestido-aplique-cereja.jpg" alt="Vestido Aplique Cereja">
+        </a>
         <div class="info">
             <span class="badge">🍒 Novidade</span>
             <h3>Vestido Aplique Cereja</h3>
@@ -154,6 +197,74 @@
     </div>
 </section>
 
+<!-- FRETE -->
+<section class="frete">
+    <div class="frete-container">
+        <h2>📦 Opções de Envio</h2>
+        <p class="subtitulo-frete">Escolha a melhor forma para receber seu pedido</p>
+        <div class="frete-grid">
+            <div class="frete-card">
+                <span class="icone-frete">📮</span>
+                <strong>PAC</strong>
+                <p>Econômico e confiável</p>
+                <small>Prazo: 3 a 12 dias úteis</small>
+                <small>Rastreamento via Correios</small>
+                <span class="selo-frete">💰 + Econômico</span>
+            </div>
+            <div class="frete-card destaque">
+                <span class="icone-frete">🚀</span>
+                <strong>SEDEX</strong>
+                <p>Entrega rápida e prioritária</p>
+                <small>Prazo: 1 a 3 dias úteis</small>
+                <small>Rastreamento via Correios</small>
+                <span class="selo-frete destaque">⚡ + Rápido</span>
+            </div>
+        </div>
+        <div class="info-frete">
+            <p>💰 O valor exato do frete é calculado com base no <strong>CEP de destino</strong> e no <strong>peso do pedido</strong>.</p>
+            <p>📱 <strong>Envie uma mensagem no WhatsApp</strong> com seu CEP e os itens desejados, e nossa equipe te informa o valor certinho!</p>
+            <a href="https://wa.me/5561998166024?text=Olá!%20Gostaria%20de%20saber%20o%20frete%20para%20o%20meu%20CEP%3A%20" target="_blank" class="btn-frete-whats">💬 Calcular frete agora</a>
+        </div>
+    </div>
+</section>
+
+<!-- PAGAMENTOS -->
+<section class="pagamentos">
+    <div class="pagamentos-container">
+        <h2>💳 Formas de Pagamento</h2>
+        <p class="subtitulo-pag">Facilidade e segurança na hora de comprar</p>
+        <div class="metodos-grid">
+            <div class="metodo-card">
+                <span class="icone-metodo">📱</span>
+                <strong>PIX</strong>
+                <p>Pagamento instantâneo</p>
+                <small>Chave: (61) 99816-6024</small>
+            </div>
+            <div class="metodo-card">
+                <span class="icone-metodo">💳</span>
+                <strong>Cartão de Crédito</strong>
+                <p>Parcelamos em até 6x</p>
+                <small>Visa • Master • Elo</small>
+            </div>
+            <div class="metodo-card">
+                <span class="icone-metodo">🏦</span>
+                <strong>Boleto Bancário</strong>
+                <p>Vencimento em 3 dias</p>
+                <small>Pague em qualquer banco</small>
+            </div>
+            <div class="metodo-card">
+                <span class="icone-metodo">💰</span>
+                <strong>À Vista</strong>
+                <p>Desconto especial!</p>
+                <small>Consulte condições</small>
+            </div>
+        </div>
+        <div class="info-pag">
+            <p>🔒 Ao escolher um produto, você será direcionado ao nosso WhatsApp. Lá, nossa equipe confirma o estoque e envia os dados de pagamento com total transparência.</p>
+        </div>
+    </div>
+</section>
+
 <!-- CONTATOS -->
 <section class="contato">
     <div class="contato-container">
@@ -176,6 +287,15 @@
                 <p><strong>ENVIAMOS PARA TODO O BRASIL!</strong><br>Com muito carinho até você!</p>
             </div>
         </div>
+        
+        <!-- BOTÃO DE AVALIAÇÃO -->
+        <div style="text-align: center; margin: 30px 0 10px 0;">
+            <a href="https://wa.me/5561998166024?text=Olá!%20Gostaria%20de%20deixar%20minha%20avaliação%20sobre%20a%20loja%20Artes%20Criativa%20Kids!%20Aqui%20vai%20meu%20depoimento%3A%0A%0A" target="_blank" style="background: #FFD700; color: #2c2c2c; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-size: 18px; font-weight: bold; display: inline-block; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: 0.3s; border: 2px solid #f0c000;">
+                ⭐ Deixe sua avaliação!
+            </a>
+            <p style="font-size: 13px; color: #ab9a91; margin-top: 8px;">Sua opinião é muito importante para nós! 💖</p>
+        </div>
+        
         <p class="frase-final">Qualidade que encanta, estilo que acompanha cada fase!</p>
     </div>
 </section>
@@ -282,3 +402,4 @@ function finalizarCompra() {
 
 </body>
 </html>
+
