@@ -95,6 +95,34 @@
         .btn-remover:hover { background: #c0392b; }
         .btn-adicionar-carrinho { background: #f1c40f; color: #2c2c2c; border: none; border-radius: 30px; padding: 8px 16px; font-weight: bold; font-size: 13px; cursor: pointer; transition: 0.3s; margin-top: 6px; width: 100%; }
         .btn-adicionar-carrinho:hover { background: #f39c12; }
+/* Ajustes para telas maiores (computador) */
+@media (min-width: 768px) {
+    .galeria {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas médias */
+    }
+    .card img {
+        height: 300px; /* Aumenta a altura das imagens no computador */
+    }
+    /* Ajuste para as duas imagens do card (modelo + filha) */
+    .card .duas-imagens {
+        display: flex;
+        flex-direction: row; /* Uma ao lado da outra no computador */
+        gap: 4px;
+    }
+    .card .duas-imagens a {
+        flex: 1;
+    }
+    .card .duas-imagens img {
+        height: 200px; /* Altura ajustada para o computador */
+    }
+}
+
+/* Para telas muito grandes (acima de 1200px) */
+@media (min-width: 1200px) {
+    .galeria {
+        grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas grandes */
+    }
+}
     </style>
 </head>
 <body>
@@ -196,7 +224,35 @@
         </div>
     </div>
 </section>
-
+<!-- Card 6 - Festa Junina (Alta Qualidade / Sob Encomenda) -->
+<div class="card" data-nome="Vestido Tema Junino" data-preco="299.00">
+    <div class="duas-imagens">
+        <a href="IMG-20260708-WA0069(1).jpg" target="_blank">
+            <img src="IMG-20260708-WA0069(1).jpg" alt="Vestido Tema Junino - Modelo">
+        </a>
+        <a href="IMG-20260713-WA0066.jpg" target="_blank">
+            <img src="IMG-20260713-WA0066.jpg" alt="Vestido Tema Junino - Sua filha usando">
+        </a>
+    </div>
+    <div style="text-align: center; font-size: 11px; color: #ab9a91; padding: 2px 0;">
+        ❤️ Sua filha usando o vestido! (10 meses)
+    </div>
+    <div class="info">
+        <span class="badge" style="background: #b28b7a;">✨ Alta Qualidade</span>
+        <h3>Vestido Tema Junino</h3>
+        <div class="avaliacao"><span class="estrelas">★★★★★</span> 4.9 (8)</div>
+        <div class="preco" style="font-size: 22px; color: #2c2c2c;">R$ 299,00</div>
+        <div class="detalhe" style="font-weight: bold; color: #4a3f3a;">🌟 Sob encomenda · Acabamento premium</div>
+        <div class="detalhe">Tecido leve · Babados · Renda · Tamanhos: 2 a 10 anos</div>
+        <div class="tamanhos"><span>P</span><span>M</span><span>G</span><span>GG</span></div>
+        <div class="qtde">
+            <span>📅 Entrega em até 5 dias</span>
+            <span>🧵 Peça exclusiva</span>
+        </div>
+        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('Vestido Tema Junino', 299.00)">🛒 Adicionar ao carrinho</button>
+        <a href="https://wa.me/5561998166024?text=Olá!%20Vi%20o%20Vestido%20Tema%20Junino%20(Alta%20Qualidade)%20e%20quero%20encomendar%20para%20minha%20filha!%20Poderia%20me%20passar%20mais%20informações?" target="_blank" class="btn-comprar">💬 Quero encomendar!</a>
+    </div>
+</div>
 <!-- FRETE -->
 <section class="frete">
     <div class="frete-container">
@@ -227,36 +283,6 @@
         </div>
     </div>
 </section>
-<!-- Card 6 - Festa Junina (Alta Qualidade / Sob Encomenda) -->
-<div class="card" data-nome="Vestido Tema Junino" data-preco="299.00">
-    <div style="display: flex; flex-direction: column; gap: 4px;">
-        <a href="IMG-20260708-WA0069(1).jpg" target="_blank">
-            <img src="IMG-20260708-WA0069(1).jpg" alt="Vestido Tema Junino - Modelo" style="height: 180px; object-fit: cover;">
-        </a>
-        <a href="IMG-20260713-WA0066.jpg" target="_blank">
-            <img src="IMG-20260713-WA0066.jpg" alt="Vestido Tema Junino - Sua filha usando" style="height: 180px; object-fit: cover; border-top: 2px solid #f0ebe6;">
-        </a>
-        <div style="text-align: center; font-size: 11px; color: #ab9a91; padding: 2px 0;">
-            ❤️ Sua filha usando o vestido! (10 meses)
-        </div>
-    </div>
-    <div class="info">
-        <span class="badge" style="background: #b28b7a;">✨ Alta Qualidade</span>
-        <h3>Vestido Tema Junino</h3>
-        <div class="avaliacao"><span class="estrelas">★★★★★</span> 4.9 (8)</div>
-        <div class="preco" style="font-size: 22px; color: #2c2c2c;">R$ 299,00</div>
-        <div class="detalhe" style="font-weight: bold; color: #4a3f3a;">🌟 Sob encomenda · Acabamento premium</div>
-        <div class="detalhe">Tecido leve · Babados · Renda · Tamanhos: 2 a 10 anos</div>
-        <div class="tamanhos"><span>P</span><span>M</span><span>G</span><span>GG</span></div>
-        <div class="qtde">
-            <span>📅 Entrega em até 5 dias</span>
-            <span>🧵 Peça exclusiva</span>
-        </div>
-        <button class="btn-adicionar-carrinho" onclick="adicionarAoCarrinho('Vestido Tema Junino', 299.00)">🛒 Adicionar ao carrinho</button>
-        <a href="https://wa.me/5561998166024?text=Olá!%20Vi%20o%20Vestido%20Tema%20Junino%20(Alta%20Qualidade)%20e%20quero%20encomendar%20para%20minha%20filha!%20Poderia%20me%20passar%20mais%20informações?" target="_blank" class="btn-comprar">💬 Quero encomendar!</a>
-    </div>
-</div>
-
 <!-- PAGAMENTOS -->
 <section class="pagamentos">
     <div class="pagamentos-container">
@@ -431,4 +457,5 @@ function finalizarCompra() {
 
 </body>
 </html>
+
 
